@@ -1,0 +1,13 @@
+{
+  "name": "com.aryz.localization",
+  "version": "1.0.0",
+  "displayName": "Aryz Localization",
+  "description": "Aryz Localization is a package that provides localization tools for VRChat projects.",
+  "unity": "2022.3",
+  "unityRelease": "22f1",
+  "dependencies": {},
+  "keywords": [],
+  "author": {
+    "name": "Aryz"
+  }
+}
