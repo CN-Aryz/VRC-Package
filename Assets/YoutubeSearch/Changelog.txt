@@ -1,0 +1,132 @@
+Changelog
+
+
+### Version 1.01 - first public release
+Changes:
+- added ProTV support
+
+
+### Version 1.02 - protv3 hotfix, editor script updates
+Fixes:
+- fixed compatibility with different versions of ProTV
+Changes:
+- created framework for adding more supported videoplayers in the future
+- changed editor script to indicate more clearly whats wrong and if
+  the settings are applied or not.
+- Updated Readme.txt with troubleshooting guide and additional info for ProTV3
+  and search pools
+Additions:
+- Added Transparent version of the prefab
+
+
+### Version 1.03 - editor script updates, custom urls support separately for both android and pc
+Due to and issue in android builds of vrchat (https://feedback.vrchat.com/udon/p/vrcurlinputfield-incorrect-focus-issue-on-quest)
+made support for custom, shorter urls that are nicer to use on android
+(can be set inside of internal settings, only do if you know what you are doing)
+
+Fixes:
+- fixed weird rendering of the bottom of the scroll view due to using compressed sprite as a mask for it
+Changes:
+- reworked assigning default url logic, automated android detection
+- links in the into tab are now clickable
+- better distinguishing between adroid-specific and pc-specific logic
+Additions:
+- added option to force search to think its on adroid when its on pc, mostly for debugging
+
+
+### Version 1.04 - IwaSync3 support and bug fix
+
+Fixes:
+- Reverted to loading logic from 1.02 due to error that made it load infinitely in some cases
+- Small UI Fixes
+Changes: 
+- Removed separate URLs for Android (from 1.03) because vrchat will fix the issue it was made to fix in the next update
+Additions:
+- IwaSync3 Support
+- IwaSync3 Styled prefab
+
+
+### Version 1.05 - Queue plugins, video titles and arbitrary videoplayers support
+
+Fixes: 
+- Adjusted some ui collision boxes being wrong size
+
+Changes:
+- Changed default pre-filled url message to simpler "Type search here →" (can be changed in internals if needed)
+- Renamed InputField into YTSearchPrefab_URLInputField to make it easier to tell it apart from other input fields
+- Restructured Results template to enable more diverse on-hover animations
+- Improved Editor HelpBox messages to include clear instructions on what to do rather than just error statements
+- Improved UI feedback:
+  - Hovering over the preview will both darken the preview and display available interaction options (Play / Queue)
+  with buttons on-hover animation being separated too
+- Substatially improved Error handling - now if you have setup something incorrectly you will see an error in game 
+  instead of things just breaking / undefined behaviour / infinite loading
+  yay no more infinite loading
+- Removed option to render results in compact view wihthout images because nobody used it and it was a potential
+  point of failure
+- Simplified some other logic to get rid of other potential points of failure
+
+Additions:
+- Added support for Queue plugins:
+  - Now you can specify VRCUrlInputField to use when adding video to the Queue
+  - Now you can specify InputField for the name of the video, so Queue displays its name instead of URLs
+  - You can choose if you want to keep both Play and Queue buttons or use only Queue (useful for players 
+  like ProTV where they use the same input logic so buttons do the same thing anyway)
+- Added ability to display name of the video instead of URL on videoplayer that support it (have InputField
+  for it)
+- Aded support for any videoplayers using VRCUrlInputField with custom events for entering URL, so now you
+  can connect it to practically any videoplayer in the game
+- Prefab version is not printed in the debug output upon its initialization
+
+
+
+### Version 1.1 - !IMPORTANT fix for preview processing logic
+If you have preview displaying issues - update to this one!
+
+Additions:
+- Added ability to load playlists by putting either playlist link or link to a video from playlist into search 
+
+Fixes:
+- Fixed bug making previews look weird (previews can be any size now)
+- Fixed Search Field overflowing if the request was very loading
+- Fixed name of the InputField on IwaSync3 variant 
+
+
+
+### Version 1.11 - Major pool generation optimization and support for more videoplayers:
+
+Additions:
+- Native YAMA player support (Requested by TORI)
+- Native VizVid player support (Requested by Rosefall)
+- Added setting that forces search to preoretize latest videos in the results (on by default)
+
+Changes: 
+- Pool generation now runs as a post-process, significantly speeding up build times, especially
+  for big pools of URLs (before it required up to 7min to build world with 30_000 urls in the pool,
+  now its practically instant)
+- Improved error handling in cases where image is not provided or can't be loaded
+- Clarified License agreement making it significantly easier to understand
+
+Fixes:
+- Fixed case where if the SearchManager is left disabled at start - first search doesn't result in
+  errors for those cases anymore
+
+
+
+### Version 1.12 - New UI Styles and minor Fixes
+
+Additions:
+- Prefab version with big images:3
+  - big images default style
+  - big images transparent style
+  - big images IwaSync style
+
+Fixes:
+- Fixed VizVid native support, now it sends both events needed to play the video sequentially
+- Fixed wrong offset of hover overlay on the video images
+- Fixed bug that made preoretizing latest not apply correctly decreasing general quality of the search results
+
+Changes:
+- Changed internal structure of the result template to make it possible to adjust to the title size
+- Changed folder structure of prefabs a bit to make it easier to find version you need
+- Changed UI stuff to allow for easier resizing if needed (still pretty bothersome, ngl)

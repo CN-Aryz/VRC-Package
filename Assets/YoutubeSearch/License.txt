@@ -1,0 +1,21 @@
+Copyright (c) 2024 Rinvo
+
+Permission to use and modify this package for personal purposes is hereby granted. 
+Distribution or redistribution of this package, either in its original or modified form, is not allowed.
+
+With this Personal License, you may:
+- Modify the prefab to fit your personal needs.
+- Use this prefab in personal worlds.
+
+With this Personal License, you may not:
+- Use this prefab for any commercial purposes, including but not limited to selling worlds or undertaking commissions that include this prefab.
+- Distribute or redistribute this package on its own, whether in its original or modified form.
+- Sell or distribute worlds containing this prefab.
+
+THE ASSET IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS ASSET INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS ASSET.
